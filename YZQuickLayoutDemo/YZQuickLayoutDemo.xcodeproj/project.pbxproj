@@ -14,6 +14,8 @@
 		121FA9401A35CAD300A804A5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 121FA93F1A35CAD300A804A5 /* Images.xcassets */; };
 		121FA9431A35CAD300A804A5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 121FA9411A35CAD300A804A5 /* LaunchScreen.xib */; };
 		121FA94F1A35CAD300A804A5 /* YZQuickLayoutDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 121FA94E1A35CAD300A804A5 /* YZQuickLayoutDemoTests.m */; };
+		121FA95B1A35CC8F00A804A5 /* YZQuickLayoutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 121FA95A1A35CC8F00A804A5 /* YZQuickLayoutView.m */; };
+		121FA95E1A35D1FD00A804A5 /* CalendarItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 121FA95D1A35D1FD00A804A5 /* CalendarItemView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,10 @@
 		121FA9481A35CAD300A804A5 /* YZQuickLayoutDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YZQuickLayoutDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		121FA94D1A35CAD300A804A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		121FA94E1A35CAD300A804A5 /* YZQuickLayoutDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZQuickLayoutDemoTests.m; sourceTree = "<group>"; };
+		121FA9591A35CC8F00A804A5 /* YZQuickLayoutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZQuickLayoutView.h; sourceTree = "<group>"; };
+		121FA95A1A35CC8F00A804A5 /* YZQuickLayoutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZQuickLayoutView.m; sourceTree = "<group>"; };
+		121FA95C1A35D1FD00A804A5 /* CalendarItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarItemView.h; sourceTree = "<group>"; };
+		121FA95D1A35D1FD00A804A5 /* CalendarItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarItemView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +69,7 @@
 		121FA9261A35CAD300A804A5 = {
 			isa = PBXGroup;
 			children = (
+				121FA9581A35CC8F00A804A5 /* Source */,
 				121FA9311A35CAD300A804A5 /* YZQuickLayoutDemo */,
 				121FA94B1A35CAD300A804A5 /* YZQuickLayoutDemoTests */,
 				121FA9301A35CAD300A804A5 /* Products */,
@@ -89,6 +96,8 @@
 				121FA93F1A35CAD300A804A5 /* Images.xcassets */,
 				121FA9411A35CAD300A804A5 /* LaunchScreen.xib */,
 				121FA9321A35CAD300A804A5 /* Supporting Files */,
+				121FA95C1A35D1FD00A804A5 /* CalendarItemView.h */,
+				121FA95D1A35D1FD00A804A5 /* CalendarItemView.m */,
 			);
 			path = YZQuickLayoutDemo;
 			sourceTree = "<group>";
@@ -117,6 +126,15 @@
 				121FA94D1A35CAD300A804A5 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		121FA9581A35CC8F00A804A5 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				121FA9591A35CC8F00A804A5 /* YZQuickLayoutView.h */,
+				121FA95A1A35CC8F00A804A5 /* YZQuickLayoutView.m */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,6 +240,8 @@
 				121FA93B1A35CAD300A804A5 /* ViewController.m in Sources */,
 				121FA9381A35CAD300A804A5 /* AppDelegate.m in Sources */,
 				121FA9351A35CAD300A804A5 /* main.m in Sources */,
+				121FA95E1A35D1FD00A804A5 /* CalendarItemView.m in Sources */,
+				121FA95B1A35CC8F00A804A5 /* YZQuickLayoutView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +432,7 @@
 				121FA9541A35CAD300A804A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		121FA9551A35CAD300A804A5 /* Build configuration list for PBXNativeTarget "YZQuickLayoutDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +441,7 @@
 				121FA9571A35CAD300A804A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

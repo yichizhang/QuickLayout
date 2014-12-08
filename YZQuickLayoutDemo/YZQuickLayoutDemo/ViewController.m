@@ -7,8 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "CalendarItemView.h"
 
 @interface ViewController ()
+
+@property (weak, nonatomic) IBOutlet CalendarItemView *calendarItemView;
 
 @end
 
@@ -17,6 +20,9 @@
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+	
+	self.calendarItemView.monthLabel.backgroundColor = [UIColor blueColor];
+	self.calendarItemView.dayLabel.backgroundColor = [UIColor yellowColor];
 }
 
 - (void)didReceiveMemoryWarning {
