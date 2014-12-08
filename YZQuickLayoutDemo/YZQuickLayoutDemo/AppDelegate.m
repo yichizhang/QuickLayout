@@ -1,6 +1,6 @@
 //
 //  AppDelegate.m
-//  YZQuickLayoutViewDemo
+//  YZQuickLayoutDemo
 //
 //  Created by Yichi on 8/12/2014.
 //  Copyright (c) 2014 Yichi Zhang. All rights reserved.

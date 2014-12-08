@@ -1,6 +1,6 @@
 //
-//  YZQuickLayoutViewDemoTests.m
-//  YZQuickLayoutViewDemoTests
+//  YZQuickLayoutDemoTests.m
+//  YZQuickLayoutDemoTests
 //
 //  Created by Yichi on 8/12/2014.
 //  Copyright (c) 2014 Yichi Zhang. All rights reserved.
@@ -9,11 +9,11 @@
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 
-@interface YZQuickLayoutViewDemoTests : XCTestCase
+@interface YZQuickLayoutDemoTests : XCTestCase
 
 @end
 
-@implementation YZQuickLayoutViewDemoTests
+@implementation YZQuickLayoutDemoTests
 
 - (void)setUp {
     [super setUp];
