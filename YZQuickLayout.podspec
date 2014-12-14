@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name         = "YZQuickLayoutView"
+  s.name         = "YZQuickLayout"
   s.version      = "0.0.1"
   s.summary      = "Layout a view's sub view with padding, interim and height/ width percentage."
   s.homepage     = "https://github.com/yichizhang/" + s.name
