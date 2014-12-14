@@ -9,7 +9,15 @@
 
 @import UIKit;
 
+typedef enum {
+	YZQuickLayoutModeHorizontal,
+	YZQuickLayoutModeVertical
+}YZQuickLayoutMode;
+
 @interface YZQuickLayoutView : UIView
 
+- (void)setUp;
+- (void)setQuickLayoutMode:(YZQuickLayoutMode)mode forViews:(NSArray *)views withPadding:(CGFloat)padding andSettings:(NSArray *)quickLayoutSettings;
+- (void)reloadViews;
 
 @end

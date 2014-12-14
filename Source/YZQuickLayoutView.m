@@ -11,6 +11,12 @@
 
 @interface YZQuickLayoutView ()
 
+@property (nonatomic, assign) CGFloat padding;
+@property (nonatomic, strong) NSArray *subviewsToQuickLayout;
+@property (nonatomic, strong) NSArray *quickLayoutSettings;
+@property (nonatomic, assign) CGFloat quickLayoutMode;
+
+@property (nonatomic, strong) UIView* paddingView;
 
 @end
 
@@ -20,7 +26,9 @@
 
 - (void)setUp{
 	
+	self.paddingView = [[UIView alloc] initWithFrame:CGRectZero];
 	
+	[self addSubview:self.paddingView];
 }
 
 - (instancetype)initWithCoder:(NSCoder *)coder
@@ -47,32 +55,64 @@
  
 	[super layoutSubviews];
 	
-	CGFloat currentX = 0;
-	NSUInteger idx = 0;
+	self.paddingView.frame = CGRectInset(self.bounds, self.padding, self.padding);
 	
-    for (UIView *view in self.itemsArray) {
-		
-		CGSize currentViewSize = [self sizeForItemAtIndex:idx];
-		view.frame =
-		CGRectMake(
-				   currentX,
-				   0,
-				   currentViewSize.width,
-				   currentViewSize.height
-				   );
-		currentX += currentViewSize.width;
-		idx++;
-	}
+	CGFloat parentWidth = self.paddingView.bounds.size.width;
+	CGFloat parentHeight = self.paddingView.bounds.size.height;
+	
+	__block CGFloat currentX = 0;
+	__block CGFloat currentY = 0;
+	__block CGFloat thisWidth = 0;
+	__block CGFloat thisHeight = 0;
+	
+	[self.subviewsToQuickLayout
+	 enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+		 
+		 UIView *view = obj;
+		 NSNumber *value = self.quickLayoutSettings[idx];
+		 CGFloat portion = [value floatValue];
+		 
+		 if (self.quickLayoutMode == YZQuickLayoutModeVertical) {
+			 thisWidth = parentWidth;
+			 thisHeight = parentHeight * portion;
+		 }else if (self.quickLayoutMode == YZQuickLayoutModeHorizontal) {
+			 thisWidth = parentWidth * portion;
+			 thisHeight = parentHeight;
+		 }
+		 
+		 view.frame = CGRectMake(currentX, currentY, thisWidth, thisHeight);
+		 
+		 if (self.quickLayoutMode == YZQuickLayoutModeVertical) {
+			 currentY += thisHeight;
+		 }else if (self.quickLayoutMode == YZQuickLayoutModeHorizontal) {
+			 currentX += thisWidth;
+		 }
+	 }];
 	
 }
 
-- (CGSize)sizeForItemAtIndex:(NSUInteger)index{
+- (void)setQuickLayoutMode:(YZQuickLayoutMode)mode forViews:(NSArray *)views withPadding:(CGFloat)padding andSettings:(NSArray *)quickLayoutSettings{
 	
-	return
-	CGSizeMake(
-			   self.bounds.size.width / self.itemsArray.count,
-			   self.bounds.size.height
-			   );
+	_quickLayoutMode = mode;
+	_padding = padding;
+	
+	_subviewsToQuickLayout = views;
+	_quickLayoutSettings = quickLayoutSettings;
+	
+	[self reloadViews];
+}
+
+- (void)reloadViews{
+
+	[self.subviewsToQuickLayout enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+		UIView *view = obj;
+		
+		[view removeFromSuperview];
+		
+		[self.paddingView addSubview:view];
+	}];
+	
+	[self setNeedsLayout];
 	
 }
 
