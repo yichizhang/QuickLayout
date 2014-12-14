@@ -28,7 +28,7 @@
 	[self setQuickLayoutMode:YZQuickLayoutModeVertical
 					forViews:@[self.monthLabel, self.dayLabel]
 				 withPadding:10.0
-				 andSettings:@[@(.3), @(.7)]
+				 andSettings:@[@(30), @(70)]
 	 ];
 	
 }

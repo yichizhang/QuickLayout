@@ -92,12 +92,12 @@
 				121FA9371A35CAD300A804A5 /* AppDelegate.m */,
 				121FA9391A35CAD300A804A5 /* ViewController.h */,
 				121FA93A1A35CAD300A804A5 /* ViewController.m */,
+				121FA95C1A35D1FD00A804A5 /* CalendarItemView.h */,
+				121FA95D1A35D1FD00A804A5 /* CalendarItemView.m */,
 				121FA93C1A35CAD300A804A5 /* Main.storyboard */,
 				121FA93F1A35CAD300A804A5 /* Images.xcassets */,
 				121FA9411A35CAD300A804A5 /* LaunchScreen.xib */,
 				121FA9321A35CAD300A804A5 /* Supporting Files */,
-				121FA95C1A35D1FD00A804A5 /* CalendarItemView.h */,
-				121FA95D1A35D1FD00A804A5 /* CalendarItemView.m */,
 			);
 			path = YZQuickLayoutDemo;
 			sourceTree = "<group>";

@@ -14,8 +14,10 @@
 @property (nonatomic, assign) CGFloat padding;
 @property (nonatomic, strong) NSArray *subviewsToQuickLayout;
 @property (nonatomic, strong) NSArray *quickLayoutSettings;
-@property (nonatomic, assign) CGFloat quickLayoutMode;
 
+@property (nonatomic, strong) NSArray *quickLayoutProcessedPortionValues;
+
+@property (nonatomic, assign) CGFloat quickLayoutMode;
 @property (nonatomic, strong) UIView* paddingView;
 
 @end
@@ -49,45 +51,37 @@
 	return self;
 }
 
-#pragma mark - Layout
+#pragma mark - Set Up
 
-- (void)layoutSubviews{
- 
-	[super layoutSubviews];
+- (void)processPortionValues{
 	
-	self.paddingView.frame = CGRectInset(self.bounds, self.padding, self.padding);
+	__block CGFloat totalValues = 0.0f;
+	__block CGFloat defaultValue = 1.0f;
 	
-	CGFloat parentWidth = self.paddingView.bounds.size.width;
-	CGFloat parentHeight = self.paddingView.bounds.size.height;
-	
-	__block CGFloat currentX = 0;
-	__block CGFloat currentY = 0;
-	__block CGFloat thisWidth = 0;
-	__block CGFloat thisHeight = 0;
-	
-	[self.subviewsToQuickLayout
+	[self.quickLayoutSettings
 	 enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
 		 
-		 UIView *view = obj;
-		 NSNumber *value = self.quickLayoutSettings[idx];
-		 CGFloat portion = [value floatValue];
+		 CGFloat thisValue;
 		 
-		 if (self.quickLayoutMode == YZQuickLayoutModeVertical) {
-			 thisWidth = parentWidth;
-			 thisHeight = parentHeight * portion;
-		 }else if (self.quickLayoutMode == YZQuickLayoutModeHorizontal) {
-			 thisWidth = parentWidth * portion;
-			 thisHeight = parentHeight;
+		 if ([obj isKindOfClass:[NSNumber class]]) {
+			 thisValue = [obj floatValue];
+		 }else {
+			 thisValue = defaultValue;
 		 }
 		 
-		 view.frame = CGRectMake(currentX, currentY, thisWidth, thisHeight);
-		 
-		 if (self.quickLayoutMode == YZQuickLayoutModeVertical) {
-			 currentY += thisHeight;
-		 }else if (self.quickLayoutMode == YZQuickLayoutModeHorizontal) {
-			 currentX += thisWidth;
-		 }
+		 totalValues += thisValue;
 	 }];
+	
+	NSMutableArray *tempMutableArray = [NSMutableArray array];
+	
+	[self.quickLayoutSettings
+	 enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+		 
+		 [tempMutableArray addObject:[NSNumber numberWithFloat:[obj floatValue]/totalValues]];
+		 
+	 }];
+	
+	self.quickLayoutProcessedPortionValues = [NSArray arrayWithArray:tempMutableArray];
 	
 }
 
@@ -99,7 +93,62 @@
 	_subviewsToQuickLayout = views;
 	_quickLayoutSettings = quickLayoutSettings;
 	
+	[self processPortionValues];
+	
 	[self reloadViews];
+}
+
+#pragma mark - Layout
+
+- (void)layoutSubviews{
+ 
+	[super layoutSubviews];
+	
+	self.paddingView.frame = CGRectInset(self.bounds, self.padding, self.padding);
+	
+	
+	__block CGFloat currentX = 0.0f;
+	__block CGFloat currentY = 0.0f;
+	
+	[self.subviewsToQuickLayout
+	 enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+		 
+		 UIView *view = obj;
+		 
+		 CGSize thisItemSize = [self sizeForItemAtIndex:idx];
+		 
+		 view.frame = CGRectMake(currentX, currentY, thisItemSize.width, thisItemSize.height);
+		 
+		 if (self.quickLayoutMode == YZQuickLayoutModeVertical) {
+			 currentY += thisItemSize.height;
+		 }else if (self.quickLayoutMode == YZQuickLayoutModeHorizontal) {
+			 currentX += thisItemSize.width;
+		 }
+	 }];
+	
+}
+
+- (CGSize)sizeForItemAtIndex:(NSUInteger)idx{
+	
+	CGFloat thisWidth = 0.0f;
+	CGFloat thisHeight = 0.0f;
+	
+	NSNumber *value = self.quickLayoutProcessedPortionValues[idx];
+	CGFloat portion = [value floatValue];
+	
+	CGFloat parentWidth = self.paddingView.bounds.size.width;
+	CGFloat parentHeight = self.paddingView.bounds.size.height;
+	
+	if (self.quickLayoutMode == YZQuickLayoutModeVertical) {
+		thisWidth = parentWidth;
+		thisHeight = parentHeight * portion;
+	}else if (self.quickLayoutMode == YZQuickLayoutModeHorizontal) {
+		thisWidth = parentWidth * portion;
+		thisHeight = parentHeight;
+	}
+	
+	return CGSizeMake(thisWidth, thisHeight);
+	
 }
 
 - (void)reloadViews{
