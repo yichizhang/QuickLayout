@@ -16,6 +16,8 @@
 		121FA94F1A35CAD300A804A5 /* YZQuickLayoutDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 121FA94E1A35CAD300A804A5 /* YZQuickLayoutDemoTests.m */; };
 		121FA95E1A35D1FD00A804A5 /* CalendarItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 121FA95D1A35D1FD00A804A5 /* CalendarItemView.m */; };
 		12C676B21A3D44CF0031A142 /* YZQuickLayoutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 12C676B11A3D44CF0031A142 /* YZQuickLayoutView.m */; };
+		12C676B51A3D65050031A142 /* DemoSegmentedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C676B41A3D65050031A142 /* DemoSegmentedView.swift */; };
+		12C676B71A3D68D00031A142 /* DemoStyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C676B61A3D68D00031A142 /* DemoStyleKit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,9 @@
 		121FA95D1A35D1FD00A804A5 /* CalendarItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarItemView.m; sourceTree = "<group>"; };
 		12C676B01A3D44CF0031A142 /* YZQuickLayoutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZQuickLayoutView.h; sourceTree = "<group>"; };
 		12C676B11A3D44CF0031A142 /* YZQuickLayoutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZQuickLayoutView.m; sourceTree = "<group>"; };
+		12C676B31A3D65050031A142 /* YZQuickLayoutDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YZQuickLayoutDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		12C676B41A3D65050031A142 /* DemoSegmentedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoSegmentedView.swift; sourceTree = "<group>"; };
+		12C676B61A3D68D00031A142 /* DemoStyleKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoStyleKit.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,10 +99,13 @@
 				121FA93A1A35CAD300A804A5 /* ViewController.m */,
 				121FA95C1A35D1FD00A804A5 /* CalendarItemView.h */,
 				121FA95D1A35D1FD00A804A5 /* CalendarItemView.m */,
+				12C676B41A3D65050031A142 /* DemoSegmentedView.swift */,
+				12C676B61A3D68D00031A142 /* DemoStyleKit.swift */,
 				121FA93C1A35CAD300A804A5 /* Main.storyboard */,
 				121FA93F1A35CAD300A804A5 /* Images.xcassets */,
 				121FA9411A35CAD300A804A5 /* LaunchScreen.xib */,
 				121FA9321A35CAD300A804A5 /* Supporting Files */,
+				12C676B31A3D65050031A142 /* YZQuickLayoutDemo-Bridging-Header.h */,
 			);
 			path = YZQuickLayoutDemo;
 			sourceTree = "<group>";
@@ -241,7 +249,9 @@
 				121FA93B1A35CAD300A804A5 /* ViewController.m in Sources */,
 				121FA9381A35CAD300A804A5 /* AppDelegate.m in Sources */,
 				121FA9351A35CAD300A804A5 /* main.m in Sources */,
+				12C676B71A3D68D00031A142 /* DemoStyleKit.swift in Sources */,
 				121FA95E1A35D1FD00A804A5 /* CalendarItemView.m in Sources */,
+				12C676B51A3D65050031A142 /* DemoSegmentedView.swift in Sources */,
 				12C676B21A3D44CF0031A142 /* YZQuickLayoutView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -364,9 +374,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = YZQuickLayoutDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "YZQuickLayoutDemo/YZQuickLayoutDemo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -374,9 +387,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = YZQuickLayoutDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "YZQuickLayoutDemo/YZQuickLayoutDemo-Bridging-Header.h";
 			};
 			name = Release;
 		};

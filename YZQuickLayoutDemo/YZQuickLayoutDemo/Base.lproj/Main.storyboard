@@ -17,14 +17,27 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZVA-kz-XJY" customClass="CalendarItemView">
-                                <rect key="frame" x="30" y="38" width="198" height="231"/>
+                                <rect key="frame" x="38" y="147" width="153" height="148"/>
                                 <color key="backgroundColor" red="0.10980392160000001" green="0.61960784310000006" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T9i-g8-6H0" customClass="DemoSegmentedView" customModule="YZQuickLayoutDemo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="600" height="60"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="dXr-zs-rzC"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="T9i-g8-6H0" secondAttribute="trailing" id="EOj-n7-RgR"/>
+                            <constraint firstItem="T9i-g8-6H0" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="ZbS-uw-R0Z"/>
+                            <constraint firstItem="T9i-g8-6H0" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="eSE-HU-nIu"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="calendarItemView" destination="ZVA-kz-XJY" id="b7W-Ul-WRh"/>
+                        <outlet property="demoSegmentedView" destination="T9i-g8-6H0" id="rbe-Mi-BIy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
