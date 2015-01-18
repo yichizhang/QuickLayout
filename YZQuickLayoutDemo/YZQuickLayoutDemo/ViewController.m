@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "CalendarItemView.h"
 #import "YZQuickLayoutDemo-Swift.h"
+#import "UIView+YZQuickLayout.h"
 
 @interface ViewController ()
 
@@ -22,6 +23,12 @@
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+	
+	UIView *redView = [[UIView alloc] initWithFrame:CGRectZero];
+	redView.backgroundColor = [UIColor redColor];
+	[self.view addSubview:redView];
+	[self.view sendSubviewToBack:redView];
+	[redView yz_quickLayoutInSuperviewWithPadding:UIEdgeInsetsMake(5, 10, 15, 20)];
 	
 	self.calendarItemView.monthLabel.backgroundColor = [UIColor blueColor];
 	self.calendarItemView.dayLabel.backgroundColor = [UIColor yellowColor];

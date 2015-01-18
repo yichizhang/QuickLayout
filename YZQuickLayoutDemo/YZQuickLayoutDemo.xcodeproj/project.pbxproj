@@ -15,6 +15,7 @@
 		121FA9431A35CAD300A804A5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 121FA9411A35CAD300A804A5 /* LaunchScreen.xib */; };
 		121FA94F1A35CAD300A804A5 /* YZQuickLayoutDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 121FA94E1A35CAD300A804A5 /* YZQuickLayoutDemoTests.m */; };
 		121FA95E1A35D1FD00A804A5 /* CalendarItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 121FA95D1A35D1FD00A804A5 /* CalendarItemView.m */; };
+		122A34DD1A6C1E1700DB42D2 /* UIView+YZQuickLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 122A34DC1A6C1E1700DB42D2 /* UIView+YZQuickLayout.m */; };
 		12C676B21A3D44CF0031A142 /* YZQuickLayoutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 12C676B11A3D44CF0031A142 /* YZQuickLayoutView.m */; };
 		12C676B51A3D65050031A142 /* DemoSegmentedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C676B41A3D65050031A142 /* DemoSegmentedView.swift */; };
 		12C676B71A3D68D00031A142 /* DemoStyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C676B61A3D68D00031A142 /* DemoStyleKit.swift */; };
@@ -46,6 +47,8 @@
 		121FA94E1A35CAD300A804A5 /* YZQuickLayoutDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZQuickLayoutDemoTests.m; sourceTree = "<group>"; };
 		121FA95C1A35D1FD00A804A5 /* CalendarItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarItemView.h; sourceTree = "<group>"; };
 		121FA95D1A35D1FD00A804A5 /* CalendarItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarItemView.m; sourceTree = "<group>"; };
+		122A34DB1A6C1E1700DB42D2 /* UIView+YZQuickLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YZQuickLayout.h"; sourceTree = "<group>"; };
+		122A34DC1A6C1E1700DB42D2 /* UIView+YZQuickLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+YZQuickLayout.m"; sourceTree = "<group>"; };
 		12C676B01A3D44CF0031A142 /* YZQuickLayoutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZQuickLayoutView.h; sourceTree = "<group>"; };
 		12C676B11A3D44CF0031A142 /* YZQuickLayoutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZQuickLayoutView.m; sourceTree = "<group>"; };
 		12C676B31A3D65050031A142 /* YZQuickLayoutDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YZQuickLayoutDemo-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -141,6 +144,8 @@
 			children = (
 				12C676B01A3D44CF0031A142 /* YZQuickLayoutView.h */,
 				12C676B11A3D44CF0031A142 /* YZQuickLayoutView.m */,
+				122A34DB1A6C1E1700DB42D2 /* UIView+YZQuickLayout.h */,
+				122A34DC1A6C1E1700DB42D2 /* UIView+YZQuickLayout.m */,
 			);
 			name = Source;
 			path = ../Source;
@@ -249,6 +254,7 @@
 				121FA93B1A35CAD300A804A5 /* ViewController.m in Sources */,
 				121FA9381A35CAD300A804A5 /* AppDelegate.m in Sources */,
 				121FA9351A35CAD300A804A5 /* main.m in Sources */,
+				122A34DD1A6C1E1700DB42D2 /* UIView+YZQuickLayout.m in Sources */,
 				12C676B71A3D68D00031A142 /* DemoStyleKit.swift in Sources */,
 				121FA95E1A35D1FD00A804A5 /* CalendarItemView.m in Sources */,
 				12C676B51A3D65050031A142 /* DemoSegmentedView.swift in Sources */,

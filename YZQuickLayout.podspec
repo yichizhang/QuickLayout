@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "YZQuickLayout"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "Layout a view's sub view with padding, interim and height/ width percentage."
   s.homepage     = "https://github.com/yichizhang/" + s.name
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
