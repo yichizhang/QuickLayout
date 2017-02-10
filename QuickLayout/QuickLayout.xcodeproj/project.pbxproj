@@ -15,7 +15,22 @@
 		123CE7A41E4DE68C007EECD9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 123CE7A21E4DE68C007EECD9 /* LaunchScreen.storyboard */; };
 		123CE7AB1E4DE757007EECD9 /* QuickLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123CE7AA1E4DE757007EECD9 /* QuickLayout.swift */; };
 		123CE7AC1E4DE769007EECD9 /* QuickLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 123CE7881E4DE5BF007EECD9 /* QuickLayout.framework */; };
+		123CE7D81E4E06CA007EECD9 /* QuickLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 123CE7881E4DE5BF007EECD9 /* QuickLayout.framework */; };
+		123CE7E11E4E07E2007EECD9 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 123CE7DF1E4E07E2007EECD9 /* Nimble.framework */; };
+		123CE7E21E4E07E2007EECD9 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 123CE7E01E4E07E2007EECD9 /* Quick.framework */; };
+		123CE7E51E4E0A96007EECD9 /* QuickLayoutEdgesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123CE7E41E4E0A96007EECD9 /* QuickLayoutEdgesTests.swift */; };
+		123CE7E71E4E0DE7007EECD9 /* TestUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123CE7E61E4E0DE7007EECD9 /* TestUtils.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		123CE7D91E4E06CA007EECD9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 123CE77F1E4DE5BF007EECD9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 123CE7871E4DE5BF007EECD9;
+			remoteInfo = QuickLayout;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		123CE7881E4DE5BF007EECD9 /* QuickLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QuickLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -29,6 +44,12 @@
 		123CE7A31E4DE68C007EECD9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		123CE7A51E4DE68C007EECD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		123CE7AA1E4DE757007EECD9 /* QuickLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuickLayout.swift; sourceTree = "<group>"; };
+		123CE7D31E4E06CA007EECD9 /* QuickLayoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuickLayoutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		123CE7D71E4E06CA007EECD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		123CE7DF1E4E07E2007EECD9 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		123CE7E01E4E07E2007EECD9 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		123CE7E41E4E0A96007EECD9 /* QuickLayoutEdgesTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuickLayoutEdgesTests.swift; sourceTree = "<group>"; };
+		123CE7E61E4E0DE7007EECD9 /* TestUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestUtils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +68,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		123CE7D01E4E06CA007EECD9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				123CE7E11E4E07E2007EECD9 /* Nimble.framework in Frameworks */,
+				123CE7E21E4E07E2007EECD9 /* Quick.framework in Frameworks */,
+				123CE7D81E4E06CA007EECD9 /* QuickLayout.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -55,7 +86,9 @@
 			children = (
 				123CE78A1E4DE5BF007EECD9 /* QuickLayout */,
 				123CE7981E4DE68C007EECD9 /* QuickLayoutDemo */,
+				123CE7D41E4E06CA007EECD9 /* QuickLayoutTests */,
 				123CE7891E4DE5BF007EECD9 /* Products */,
+				123CE7DE1E4E07E1007EECD9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +97,7 @@
 			children = (
 				123CE7881E4DE5BF007EECD9 /* QuickLayout.framework */,
 				123CE7971E4DE68C007EECD9 /* QuickLayoutDemo.app */,
+				123CE7D31E4E06CA007EECD9 /* QuickLayoutTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -98,6 +132,25 @@
 			);
 			name = Source;
 			path = ../../Source;
+			sourceTree = "<group>";
+		};
+		123CE7D41E4E06CA007EECD9 /* QuickLayoutTests */ = {
+			isa = PBXGroup;
+			children = (
+				123CE7D71E4E06CA007EECD9 /* Info.plist */,
+				123CE7E41E4E0A96007EECD9 /* QuickLayoutEdgesTests.swift */,
+				123CE7E61E4E0DE7007EECD9 /* TestUtils.swift */,
+			);
+			path = QuickLayoutTests;
+			sourceTree = "<group>";
+		};
+		123CE7DE1E4E07E1007EECD9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				123CE7DF1E4E07E2007EECD9 /* Nimble.framework */,
+				123CE7E01E4E07E2007EECD9 /* Quick.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,6 +202,25 @@
 			productReference = 123CE7971E4DE68C007EECD9 /* QuickLayoutDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
+		123CE7D21E4E06CA007EECD9 /* QuickLayoutTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 123CE7DD1E4E06CA007EECD9 /* Build configuration list for PBXNativeTarget "QuickLayoutTests" */;
+			buildPhases = (
+				123CE7CF1E4E06CA007EECD9 /* Sources */,
+				123CE7D01E4E06CA007EECD9 /* Frameworks */,
+				123CE7D11E4E06CA007EECD9 /* Resources */,
+				123CE7E31E4E07E8007EECD9 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				123CE7DA1E4E06CA007EECD9 /* PBXTargetDependency */,
+			);
+			name = QuickLayoutTests;
+			productName = QuickLayoutTests;
+			productReference = 123CE7D31E4E06CA007EECD9 /* QuickLayoutTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -164,6 +236,10 @@
 						ProvisioningStyle = Automatic;
 					};
 					123CE7961E4DE68C007EECD9 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					123CE7D21E4E06CA007EECD9 = {
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
 					};
@@ -184,6 +260,7 @@
 			targets = (
 				123CE7871E4DE5BF007EECD9 /* QuickLayout */,
 				123CE7961E4DE68C007EECD9 /* QuickLayoutDemo */,
+				123CE7D21E4E06CA007EECD9 /* QuickLayoutTests */,
 			);
 		};
 /* End PBXProject section */
@@ -206,7 +283,32 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		123CE7D11E4E06CA007EECD9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		123CE7E31E4E07E8007EECD9 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Nimble.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Quick.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		123CE7831E4DE5BF007EECD9 /* Sources */ = {
@@ -226,7 +328,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		123CE7CF1E4E06CA007EECD9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				123CE7E71E4E0DE7007EECD9 /* TestUtils.swift in Sources */,
+				123CE7E51E4E0A96007EECD9 /* QuickLayoutEdgesTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		123CE7DA1E4E06CA007EECD9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 123CE7871E4DE5BF007EECD9 /* QuickLayout */;
+			targetProxy = 123CE7D91E4E06CA007EECD9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		123CE79D1E4DE68C007EECD9 /* Main.storyboard */ = {
@@ -407,6 +526,36 @@
 			};
 			name = Release;
 		};
+		123CE7DB1E4E06CA007EECD9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = QuickLayoutTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yichizhang.QuickLayoutTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		123CE7DC1E4E06CA007EECD9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = QuickLayoutTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yichizhang.QuickLayoutTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -426,12 +575,22 @@
 				123CE7921E4DE5BF007EECD9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		123CE7A61E4DE68C007EECD9 /* Build configuration list for PBXNativeTarget "QuickLayoutDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				123CE7A71E4DE68C007EECD9 /* Debug */,
 				123CE7A81E4DE68C007EECD9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		123CE7DD1E4E06CA007EECD9 /* Build configuration list for PBXNativeTarget "QuickLayoutTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				123CE7DB1E4E06CA007EECD9 /* Debug */,
+				123CE7DC1E4E06CA007EECD9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
