@@ -1,2 +1,2 @@
-YZQuickLayoutView
-=================
+QuickLayout
+===========
